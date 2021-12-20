@@ -3,22 +3,19 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width,
-              user-scalable=no,
-              initial-scale=1.0,
-              maximum-scale=1.0,
-              minimum-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width,
+                user-scalable=no,
+                initial-scale=1.0,
+                maximum-scale=1.0,
+                minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
-    <h1>HTML Form</h1>
-    <form onsubmit="onSubmit(submit)" method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application">
+    <form onsubmit="onSubmit(submit)" method="post"
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application">
       <fieldset class="field">
         <legend>
           Personal information
@@ -26,10 +23,10 @@
         <label class="field__item" for="Surname">
           Surname:
           <input
-          id="Surname"
-          type="text"
-          name="Surname"
-          required
+            id="Surname"
+            type="text"
+            name="Surname"
+            required
           >
         </label>
         <label class="field__item" for="Name">
@@ -42,22 +39,27 @@
             autocomplete="off"
           >
         </label>
-        <label class="field__item" for="number">
-          How old are You?:
+        <label class="field__item" for="Old">
+          How old are You?
           <input
-            id="number"
+            id="Old"
             type="number"
             name="Old"
-            min="1"
-            max="100"
             value="12"
+            max="100"
+            class="numb"
           >
         </label>
-        <label class="personal__item" for="date">
+        <label class="field__item" for="date">
           Full date of birth:
-          <input id="date" type="date" name="Birth">
+          <input
+            id="date"
+            type="date"
+            name="Birth"
+            min="1"
+          >
         </label>
-        <label class="personal__item" for="accept">
+        <label class="field__item" for="accept">
           I accept the term of the agreement
           <input id="accept" type="checkbox" name="accept">
         </label>
@@ -69,48 +71,48 @@
         <label class="field__item" for="email">
           E-mail:
           <input
-          id="email"
-          type="email"
-          name="email:"
-          multiple
-          placeholder="email@example.com"
+            id="email"
+            type="email"
+            name="email:"
+            multiple
+            placeholder="email@example.com"
           >
         </label>
         <label class="field__item" for="password">
           Password:
           <input
-          id="password"
-          type="password"
-          name="password"
-          maxlength="50"
+            id="password"
+            type="password"
+            name="password"
+            maxlength="50"
           >
         </label>
       </fieldset>
       <fieldset class="field">
         <legend>
-          An interestong fact about you!
+          An interesting fact about you!
         </legend>
-        <div>
+        <label class="field__item">
           Do you love cats?
           <label for="cats1">
             <input
-            id="cats1"
-            type="radio"
-             name="cats"
-             value="yes"
-             >
+              id="cats1"
+              type="radio"
+              name="cats"
+              value="yes"
+            >
             Yes
           </label>
           <label for="cats2">
             <input
-            id="cats2"
-            type="radio"
-            name="cats"
-            value="no"
+              id="cats2"
+              type="radio"
+              name="cats"
+              value="no"
             >
             No
           </label>
-        </div>
+        </label>
         <label class="field__item" for="color">
           Whats is your favorite color?
           <input id="color" type="color" name="color">
@@ -121,15 +123,21 @@
         </label>
         <label class="field__item" for="cars">
           What are your favorite brand of cars?
-          <select id="cars" name="cars">
+          <select id="cars" name="cars" multiple>
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
             <option value="Lada">Lada</option>
+            <option></option>
           </select>
         </label>
         <label class="field__item" for="range">
           How do you rate our wok?
-          <input id="range" type="range" name="range">
+          <input
+            id="range"
+            type="range"
+            name="range"
+            value="0"
+          >
         </label>
       </fieldset>
       <fieldset class="field">
@@ -139,19 +147,18 @@
         <label class="field__item" for="Comments">
           Comments:
           <textarea
-          id="Comments"
-          name="Comments"
-          cols="10"
-          rows="2"
+            id="Comments"
+            name="Comments"
+            cols="20"
+            rows="2"
           ></textarea>
         </label>
         <label class="field__item" for="recommed">
           Would you recommed us?
-          <input id="recommed" list="list">
-          <datalist id="list">
-            <option value="yes"></option>
-            <option value="no"></option>
-          </datalist>
+          <select id="recommed" name="recommed">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
         </label>
       </fieldset>
       <button type="submit" value="submit">Submit</button>

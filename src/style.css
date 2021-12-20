@@ -1,9 +1,17 @@
 /* styles go here */
 .field {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .field__item {
   display: block;
-  margin: 10px 0;
+  margin-bottom: 10px;
+}
+
+.field__item:last-child {
+  margin-bottom: 0;
+}
+
+.numb {
+  width: 65px;
 }
