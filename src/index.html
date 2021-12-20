@@ -3,11 +3,9 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-                user-scalable=no,
-                initial-scale=1.0,
-                maximum-scale=1.0,
-                minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
@@ -15,7 +13,7 @@
 
   <body>
     <form
-      onsubmit="onSubmit(submit)"
+      onsubmit="onSubmit()"
       method="post"
       action="https://mate-academy-form-lesson.herokuapp.com/create-application"
     >
@@ -64,7 +62,11 @@
         </label>
         <label class="field__item" for="accept">
           I accept the term of the agreement
-          <input id="accept" type="checkbox" name="accept">
+          <input
+            id="accept"
+            type="checkbox"
+            name="accept"
+          >
         </label>
       </fieldset>
       <fieldset class="field">
@@ -118,15 +120,27 @@
         </label>
         <label class="field__item" for="color">
           Whats is your favorite color?
-          <input id="color" type="color" name="color">
+          <input
+            id="color"
+            type="color"
+            name="color"
+          >
         </label>
         <label class="field__item" for="time">
           What time do you go to bed?
-          <input id="time" type="time" name="time">
+          <input
+            id="time"
+            type="time"
+            name="time"
+          >
         </label>
         <label class="field__item" for="cars">
           What are your favorite brand of cars?
-          <select id="cars" name="cars" multiple>
+          <select
+            id="cars"
+            name="cars"
+            multiple
+          >
             <option value="BMW">BMW</option>
             <option value="Audi">Audi</option>
             <option value="Lada">Lada</option>
